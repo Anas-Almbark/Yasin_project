@@ -17,10 +17,16 @@
 .header {
   position: relative;
   min-height: 100vh;
-  background: url(../images/architect.jpg);
+  background: url("../images/architect.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+}
+.header.mobile {
+  background: url("../images/architect-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .header .nav {
   display: flex;

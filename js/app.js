@@ -1,4 +1,11 @@
 // For header Logo
+let header = document.querySelector(".header");
+if (document.body.clientWidth <= 500) {
+  header.classList.add("mobile");
+} else {
+  header.classList.remove("mobile");
+}
+
 let mainLogo = document.querySelector(".main-logo");
 document.body.clientWidth <= 1280
   ? (mainLogo.src = "./images/logo.png")
