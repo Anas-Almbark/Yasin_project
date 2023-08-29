@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+}
+:root {
+  scroll-behavior: smooth;
+  --premier-color: #e3c300;
+  --secondary-color: #fff;
+  --branch-color: #2a2e41;
+  --transition-02: 0.2s;
+}
+/* ######### Start Style Header ######### */
+.header {
+  position: relative;
+  min-height: 100vh;
+  background: url(../images/architect.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+.header .nav img {
+  max-width: 300px;
+}
+.header .nav.open-nav {
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+.header .nav.open-nav nav {
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+.header .nav.open-nav ul {
+  display: block;
+}
+.header .nav.open-nav ul li a,
+.header .nav.open-nav ul li[class="lang"] {
+  display: block;
+  margin: 24px auto;
+  padding: 12px;
+  max-width: 200px;
+  border-radius: 8px;
+  background-color: var(--premier-color);
+}
+.header .nav.open-nav ul li a:hover {
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
+}
+.header .nav.open-nav ul li a {
+  color: #000;
+}
+.header .nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.header .nav ul li {
+  margin: 0 12px;
+}
+.header .nav ul li a {
+  padding: 16px 12px;
+  color: var(--secondary-color);
+  transition: var(--transition-02);
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .nav ul li a:hover {
+  color: #000;
+}
+.header .nav ul li[class="lang"] {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+  transition: var(--transition-02);
+}
+.header .nav ul li[class="lang"]:hover {
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
+}
+.header .list-icon {
+  display: none;
+}
+.header .nav.open-nav .list-icon {
+  direction: rtl;
+}
+.header .nav.open-nav .list-icon i {
+  font-size: 26px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
+}
+.header .list-icon i {
+  font-size: 24px;
+  cursor: pointer;
+}
+.header .nav ul li img {
+  max-width: 35px;
+  margin: 0 8px;
+}
+.header .btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--secondary-color);
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 10px;
+  border-radius: 12px 12px 0 0;
+}
+
+.header .btn i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--premier-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: anim-move 1s infinite;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+@keyframes anim-move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* ########## End Style Header ##########*/

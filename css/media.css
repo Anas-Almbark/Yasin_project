@@ -1,0 +1,26 @@
+/* ############# For Header ############# */
+@media (max-width: 1280px) {
+  .header .nav {
+    background-color: var(--secondary-color);
+  }
+  .header .nav nav {
+    display: none;
+  }
+  .header .list-icon {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    background-size: cover;
+  }
+  .header .nav {
+    padding: 20px;
+  }
+  .header .nav img {
+    width: 200px;
+  }
+  .header .btn {
+    width: 250px;
+  }
+}
