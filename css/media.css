@@ -24,3 +24,14 @@
     width: 250px;
   }
 }
+/* ############# For About ############# */
+@media (max-width: 780px) {
+  .about .box {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about .box .info-job {
+    max-width: 100%;
+    text-align: left;
+  }
+}

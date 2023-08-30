@@ -13,6 +13,25 @@
   --branch-color: #2a2e41;
   --transition-02: 0.2s;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dfbf00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2e41;
+}
+body {
+  background-color: #eee;
+}
 /* ######### Start Style Header ######### */
 .header {
   position: relative;
@@ -33,6 +52,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
+  transition: var(--transition-02);
+}
+.header .nav.scroll-down {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: var(--transition-02);
+
+  background-color: var(--secondary-color);
 }
 .header .nav img {
   max-width: 300px;
@@ -61,6 +90,10 @@
   border-radius: 8px;
   background-color: var(--premier-color);
 }
+.header .nav.open-nav ul li[class="lang"] {
+  display: flex;
+  justify-content: center;
+}
 .header .nav.open-nav ul li a:hover {
   background-color: var(--branch-color);
   color: var(--secondary-color);
@@ -86,6 +119,12 @@
 .header .nav ul li a:hover {
   color: #000;
 }
+.header .nav.scroll-down ul li a {
+  color: var(--branch-color);
+}
+.header .nav.scroll-down ul li a:hover {
+  color: var(--premier-color);
+}
 .header .nav ul li[class="lang"] {
   display: flex;
   align-items: center;
@@ -93,10 +132,19 @@
   background-color: var(--secondary-color);
   border-radius: 6px;
   transition: var(--transition-02);
+  cursor: pointer;
+}
+.header .nav.scroll-down ul li[class="lang"] {
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
 }
 .header .nav ul li[class="lang"]:hover {
   background-color: var(--branch-color);
   color: var(--secondary-color);
+}
+.header .nav.scroll-down ul li[class="lang"]:hover {
+  background-color: var(--premier-color);
+  color: var(--branch-color);
 }
 .header .list-icon {
   display: none;
@@ -120,7 +168,7 @@
   margin: 0 8px;
 }
 .header .btn {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -155,3 +203,77 @@
   }
 }
 /* ########## End Style Header ##########*/
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transition: 0.5s;
+}
+.about .box {
+  position: relative;
+  max-width: 1000px;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 14px;
+}
+.about .box::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--premier-color);
+  width: 40%;
+  height: 30px;
+  border-radius: 0 0 8px 8px;
+  z-index: -1;
+}
+.about .box .info-job {
+  max-width: 70%;
+}
+.about .box .info-job h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.about .box .info-job span {
+  display: block;
+  margin-top: 20px;
+  width: fit-content;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: var(--branch-color);
+}
+.about .box .info-job ul {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.about .box .info-job ul li {
+  line-height: 1.8;
+  font-size: 18px;
+}
+.about .box .info-personal img {
+  width: 200px;
+  border-radius: 50%;
+}
+.about .box .info-personal > div {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+.about .box .info-personal > div > i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--branch-color);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
