@@ -32,6 +32,36 @@
 body {
   background-color: #eee;
 }
+/* ######### Global Style ######### */
+.title-box {
+  position: relative;
+  margin: 20px auto;
+  width: fit-content;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.title-box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  text-align: center;
+  background-color: var(--branch-color);
+}
+.title-box::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  text-align: center;
+  background-color: var(--branch-color);
+}
 /* ######### Start Style Header ######### */
 .header {
   position: relative;
@@ -59,6 +89,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 9999;
   transition: var(--transition-02);
 
   background-color: var(--secondary-color);
@@ -202,7 +233,7 @@ body {
     transform: translateY(10px);
   }
 }
-/* ########## End Style Header ##########*/
+/* ########## Style About ##########*/
 .about {
   position: relative;
   display: flex;
@@ -276,4 +307,198 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+}
+/* ########## Style Languages ##########*/
+.languages {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.languages .box .content {
+  position: relative;
+  padding: 30px;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.languages .box .content img {
+  max-width: 700px;
+  user-select: none;
+}
+.circular {
+  position: relative;
+  top: -80px;
+  width: 100px;
+  height: 100px;
+  user-select: none;
+}
+.circular.ar,
+.circular.en {
+  animation: moveUp 4s infinite;
+}
+.circular.ar {
+  left: 120px;
+}
+.circular.en {
+  right: 130px;
+}
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background-color: #dde6f0;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.circular .lang-ar,
+.circular .lang-en {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  font-weight: bold;
+  text-align: center;
+  line-height: 22px;
+}
+.circular .lang-ar span,
+.circular .lang-en span {
+  color: var(--premier-color);
+  font-size: 14px;
+}
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--premier-color);
+  border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background-color: #dfbf00;
+}
+.circle .right {
+  z-index: 4;
+  transform: rotate(180deg);
+}
+.circular.ar .circle .left .progress {
+  z-index: 1;
+  transform: rotate(180deg);
+  background-color: var(--branch-color);
+}
+.circular.ar .circle .right .progress {
+  transform: rotate(180deg);
+  background-color: var(--branch-color);
+}
+.circular.en .circle .left .progress {
+  transform: rotate(180deg);
+  background-color: var(--branch-color);
+}
+.circular.en .circle .right .progress {
+  transform: rotate(90deg);
+  background-color: var(--branch-color);
+}
+@keyframes moveUp {
+  0%,
+  100% {
+    transform: translateY(-30px);
+    scale: 1.9;
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+/* ########## Style Skills ##########*/
+.skills {
+  padding: 60px 0;
+}
+.skills .content {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.skills .content .card {
+  width: calc(100% / 3 - 100px);
+  padding: 20px;
+  margin: 40px 30px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  border-top: 10px solid #3157ff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.skills .content .card img {
+  width: 150px;
+  margin: 20px 0;
+}
+.skills .content .card h3 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.skills .content .card .progress {
+  position: relative;
+  background-color: #dde6f0;
+  height: 40px;
+  margin: 20px 0 10px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.skills .content .card .progress::before {
+  content: attr(data-progress);
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+  display: block;
+  width: 100%;
+  height: inherit;
+  background-color: #3157ff;
+}
+.skills .content .card:nth-child(2) {
+  border-top: 10px solid #a72122;
+}
+.skills .content .card:nth-child(2) .progress::before {
+  background-color: #a72122;
+  width: 90%;
+}
+.skills .content .card:nth-child(3) {
+  border-top: 10px solid #40b194;
+}
+.skills .content .card:nth-child(3) .progress::before {
+  background-color: #40b194;
+  width: 100%;
+}
+.skills .content .card:nth-child(4) {
+  border-top: 10px solid #2f72bc;
+}
+.skills .content .card:nth-child(4) .progress::before {
+  background-color: #2f72bc;
+  width: 70%;
+}
+.skills .content .card:nth-child(5) {
+  border-top: 10px solid #00897b;
+}
+.skills .content .card:nth-child(5) .progress::before {
+  background-color: #00897b;
+  width: 50%;
+}
+.skills .content .card:nth-child(6) {
+  border-top: 10px solid #40758b;
+}
+.skills .content .card:nth-child(6) .progress::before {
+  background-color: #40758b;
+  width: 60%;
 }

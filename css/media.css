@@ -35,3 +35,52 @@
     text-align: left;
   }
 }
+/* ############# For Languages ############# */
+@media (max-width: 850px) {
+  .languages .box .content {
+    scale: 0.8;
+  }
+}
+@media (max-width: 750px) {
+  .languages .box .content {
+    display: block;
+  }
+  .languages .box .content img {
+    display: none;
+  }
+  .circular.ar,
+  .circular.en {
+    left: unset;
+    right: unset;
+    top: unset;
+    animation: none;
+    scale: 2.2;
+    margin-left: 25px;
+    margin-top: 250px;
+  }
+  .circular:first-child {
+    margin-top: 20px;
+  }
+  .circular.ar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 5px;
+    height: 200px;
+    background-color: var(--branch-color);
+  }
+}
+/* ############# For Skills ############# */
+@media (max-width: 1150px) {
+  .skills .content .card {
+    width: calc(100% / 2 - 100px);
+  }
+}
+@media (max-width: 750px) {
+  .skills .content .card {
+    width: calc(100% - 70px);
+  }
+}
