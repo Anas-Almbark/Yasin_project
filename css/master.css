@@ -326,6 +326,25 @@ body {
   max-width: 700px;
   user-select: none;
 }
+.languages .box .content .text-lang {
+  position: absolute;
+  top: 220px;
+  left: 54%;
+  transform: translateX(-50%);
+  width: fit-content;
+  padding: 20px;
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
+  border-radius: 4px 12px 12px 12px;
+}
+.languages .box .content .text-lang::before {
+  content: "";
+  position: absolute;
+  top: -29px;
+  left: 6px;
+  border: 15px solid transparent;
+  border-bottom-color: var(--branch-color);
+}
 .circular {
   position: relative;
   top: -80px;
@@ -467,6 +486,20 @@ body {
   height: inherit;
   background-color: #3157ff;
 }
+.skills .content .card .progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  border-radius: 4px;
+  height: 100%;
+  background: linear-gradient(to right, #ffffff00, #ffffff);
+  opacity: 0;
+}
+.skills .content .card:hover .progress::after {
+  animation: light 1s ease-in-out;
+}
 .skills .content .card:nth-child(2) {
   border-top: 10px solid #a72122;
 }
@@ -501,4 +534,61 @@ body {
 .skills .content .card:nth-child(6) .progress::before {
   background-color: #40758b;
   width: 60%;
+}
+@keyframes light {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+  }
+}
+/* ########## Style qualifications ##########*/
+
+.qualifications {
+  padding: 40px 20px;
+  background-color: var(--premier-color);
+}
+.qualifications .box {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 30px;
+}
+.qualifications .box .content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.qualifications .box .card {
+  background-color: var(--secondary-color);
+  width: calc(100% / 2 - 100px);
+  margin: 50px 20px;
+  padding: 40px 10px;
+  text-align: center;
+  border-radius: 14px;
+}
+.qualifications .box .card span:first-child {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 2px solid #a72122;
+  padding: 10px;
+}
+.qualifications .box .card p {
+  font-size: 18px;
+  margin: 16px;
+  line-height: 1.8;
+}
+.qualifications .box .card span:last-child {
+  display: block;
+  background-color: var(--branch-color);
+  width: fit-content;
+  padding: 10px 20px;
+  margin: auto;
+  border-radius: 4px;
+  color: var(--secondary-color);
 }

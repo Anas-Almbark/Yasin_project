@@ -48,6 +48,18 @@
   .languages .box .content img {
     display: none;
   }
+  .languages .box .content .text-lang {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    font-size: 18px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .languages .box .content .text-lang::before {
+    display: none;
+  }
   .circular.ar,
   .circular.en {
     left: unset;
@@ -82,5 +94,15 @@
 @media (max-width: 750px) {
   .skills .content .card {
     width: calc(100% - 70px);
+  }
+}
+/* ############# For qualifications ############# */
+@media (max-width: 1000px) {
+  .qualifications .box .content {
+    align-items: center;
+    flex-direction: column;
+  }
+  .qualifications .box .content .card {
+    width: 100%;
   }
 }
