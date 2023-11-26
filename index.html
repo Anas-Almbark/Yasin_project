@@ -7,14 +7,12 @@
     <link rel="icon" href="./images/lode.png" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css" />
     <link rel="stylesheet" href="./css/master.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/media.css" />
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
@@ -38,11 +36,14 @@
               <li><a href="#skills">skills</a></li>
               <li><a href="#qualifications">Qualifications</a></li>
               <li><a href="#work-experience">Work Experience</a></li>
-              <li><a href="#my-work">my work</a></li>
+              <li><a href="#work">my work</a></li>
               <li><a href="#call-us">call us</a></li>
               <li class="lang">
                 <span>AR</span>
                 <img src="./images/ar.png" alt="ar-lang" />
+              </li>
+              <li class="mode">
+                <i class="fa-solid fa-moon"></i>
               </li>
             </ul>
           </nav>
@@ -169,8 +170,7 @@
         </div>
       </div>
       <!-- ######### Section QUALIFICATIONS #########-->
-
-      <div class="qualifications">
+      <div class="qualifications" id="qualifications">
         <div class="box">
           <h2 class="title-box">QUALIFICATIONS</h2>
           <div class="content">
@@ -187,8 +187,155 @@
           </div>
         </div>
       </div>
+      <!-- ############# WORK EXPERIENCE ################ -->
+      <div class="work-experience" id="work-experience">
+        <div class="box">
+          <h2 class="title-box">WORK EXPERIENCE</h2>
+          <div class="content">
+            <div class="card">
+              <div class="date"><span>2014 / 2015 </span></div>
+              <div class="card-content">
+                <h3>Architectural engineering and design consultancy</h3>
+                <ul>
+                  <li>
+                    Designed many residential, commercial and service projects
+                    of residential buildings
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="date"><span>2015 / 2016</span></div>
+              <div class="card-content">
+                <h3>Intilaaqah Engineering Company</h3>
+                <ul>
+                  <li>
+                    Participated in the design of many residential, commercial
+                    and service projects of residential buildings
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="date"><span>2016 / 2021</span></div>
+              <div class="card-content">
+                <h3>
+                  Engineering Management University of the Holy Quran and the
+                  Rooting of Sciences
+                </h3>
+                <ul>
+                  <li>
+                    Designed many residential, commercial and service projects
+                    of residential buildings
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="date"><span>2021 / 2023</span></div>
+              <div class="card-content">
+                <h3>
+                  Founder of Yasin Al-Tayeb Muhammad Ali Engineering Office
+                </h3>
+                <ul>
+                  <li>
+                    Designed many residential, commercial and service projects
+                    of residential buildings
+                  </li>
+                  <li>I worked as the head of the maintenance department</li>
+                  <li>
+                    I worked as Head of the Design Department and Supervising
+                    Architectural Designs
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ############# SOME Of Work ################ -->
+      <div class="some-of-work" id="work">
+        <div class="box">
+          <div class="title-box">SOME OF MY WORK</div>
+          <div class="content">
+            <swiper-container
+              class="mySwiper2"
+              space-between="10"
+              slides-per-view="8"
+              free-mode="true"
+              watch-slides-progress="true"
+            >
+            </swiper-container>
+
+            <swiper-container
+              style="
+                --swiper-navigation-color: #2a2e41;
+                --swiper-pagination-color: #2a2e41;
+              "
+              class="mySwiper"
+              thumbs-swiper=".mySwiper2"
+              space-between="10"
+              navigation="true"
+            >
+            </swiper-container>
+          </div>
+        </div>
+      </div>
+      <div class="Social_Media" id="call-us">
+        <div class="box">
+          <div class="title-box">Social Media</div>
+        </div>
+        <div class="content">
+          <ul>
+            <li>
+              <a href="https://web.whatsapp.com/" target="_blank"
+                ><div class="circle1 circle">
+                  <i class="fab fa-whatsapp"></i></div
+              ></a>
+              <h1>Whatsapp</h1>
+              <p class="p1"></p>
+            </li>
+            <li>
+              <a href="https://www.facebook.com" target="_blank"
+                ><div class="circle2 circle">
+                  <i class="fab fa-facebook-f"></i></div
+              ></a>
+              <h1>Facebook</h1>
+              <p class="p2"></p>
+            </li>
+            <li>
+              <a href="" target="_blank"
+                ><div class="circle3 circle"><i class="fab fa-twitter"></i></div
+              ></a>
+              <h1>Twitter</h1>
+              <p class="p3"></p>
+            </li>
+            <li>
+              <a href="" target="_blank"
+                ><div class="circle4 circle">
+                  <i class="fas fa-envelope"></i></div
+              ></a>
+              <h1>Gmail</h1>
+              <p class="p4"></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <p>
+            Copyright © <span id="copyright"></span> All Rights Reserved
+            <a href="#">Yasin Al-Tayeb Muhammad Ali</a>
+          </p>
+        </div>
+      </div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+      document.getElementById("copyright").innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

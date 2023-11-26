@@ -1,3 +1,9 @@
+/* ############# Global ############# */
+@media (max-width: 500px) {
+  .title-box {
+    font-size: 28px;
+  }
+}
 /* ############# For Header ############# */
 @media (max-width: 1280px) {
   .header .nav {
@@ -104,5 +110,23 @@
   }
   .qualifications .box .content .card {
     width: 100%;
+  }
+}
+/* ############# For Work Experience ############# */
+@media (max-width: 500px) {
+  .work-experience .box {
+    padding: 0;
+  }
+}
+/* ############# For Some Of Work ############# */
+@media (max-width: 780px) {
+  .mySwiper2 .mySwiper {
+    width: 100%;
+  }
+}
+/* ############# For Footer ############# */
+@media (max-width: 780px) {
+  .footer .content p {
+    font-size: 1rem;
   }
 }

@@ -113,11 +113,12 @@ body {
   display: block;
 }
 .header .nav.open-nav ul li a,
-.header .nav.open-nav ul li[class="lang"] {
+.header .nav.open-nav ul li[class="lang"],
+.header .nav.open-nav ul li.mode i {
   display: block;
-  margin: 24px auto;
+  margin: 20px auto;
   padding: 12px;
-  max-width: 200px;
+  width: 200px;
   border-radius: 8px;
   background-color: var(--premier-color);
 }
@@ -149,6 +150,30 @@ body {
 }
 .header .nav ul li a:hover {
   color: #000;
+}
+.header .nav ul li.mode i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: var(--branch-color);
+  cursor: pointer;
+}
+.header .nav ul li.mode i:hover {
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
+  transition: var(--transition-02);
+}
+.header .nav.scroll-down ul li.mode i {
+  background-color: var(--branch-color);
+  color: var(--secondary-color);
+}
+.header .nav.scroll-down ul li.mode i:hover {
+  background-color: var(--premier-color);
+  color: var(--branch-color);
 }
 .header .nav.scroll-down ul li a {
   color: var(--branch-color);
@@ -546,7 +571,6 @@ body {
   }
 }
 /* ########## Style qualifications ##########*/
-
 .qualifications {
   padding: 40px 20px;
   background-color: var(--premier-color);
@@ -575,8 +599,9 @@ body {
   margin: auto;
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 2px solid #a72122;
-  padding: 10px;
+  border: 2px solid var(--branch-color);
+  padding: 10px 20px;
+  border-radius: 6px;
 }
 .qualifications .box .card p {
   font-size: 18px;
@@ -591,4 +616,168 @@ body {
   margin: auto;
   border-radius: 4px;
   color: var(--secondary-color);
+}
+/* ########## Style work-experience ##########*/
+.work-experience {
+  padding: 50px 20px;
+}
+.work-experience .box {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 30px;
+}
+.work-experience .box .content {
+  padding: 30px 0;
+  position: relative;
+}
+.work-experience .box .content .card {
+  background-color: #00a9ff;
+  margin: 14px 6px;
+  max-width: 650px;
+  min-height: 200px;
+  border-radius: 12px;
+  padding: 20px 12px;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  margin-bottom: 100px;
+  box-shadow: 27px 10px 39px rgba(0, 0, 0, 0.1);
+}
+.work-experience .box .content .card:nth-child(odd) {
+  left: 0%;
+  transform: translateX(0);
+}
+.work-experience .box .content .card:nth-child(2) {
+  background-color: #ff8f8f;
+}
+.work-experience .box .content .card:nth-child(3) {
+  background-color: #7ed7c1;
+}
+.work-experience .box .content .card:nth-child(4) {
+  background-color: #ec8f5e;
+}
+.work-experience .box .content .card .date {
+  position: relative;
+  left: 50%;
+  top: -50px;
+  border-radius: 6px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  display: block;
+  padding: 20px 0;
+  max-width: 180px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+.work-experience .box .content .card .card-content {
+  padding: 0 25px;
+  position: relative;
+  top: -20px;
+}
+.work-experience .box .content .card .card-content h3 {
+  font-size: 1.5em;
+  line-height: 35px;
+  margin-bottom: 8px;
+}
+.work-experience .box .content .card .card-content ul {
+  list-style: decimal;
+}
+.work-experience .box .content .card .card-content ul li {
+  font-size: 20px;
+  line-height: 30px;
+}
+/* ########## Style work-experience ##########*/
+.some-of-work {
+  padding: 30px 20px;
+}
+.some-of-work .box {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0px 30px;
+}
+.some-of-work .box .content {
+  position: relative;
+  padding: 30px 0;
+}
+/* ########## Style Social Media ##########*/
+.Social_Media .content ul {
+  margin-top: 70px;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Social_Media .content ul li {
+  margin: 10px 80px;
+  text-align: center;
+}
+.Social_Media .content ul li .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #000;
+  margin: 20px auto 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.Social_Media .content ul li .circle i {
+  color: #fff;
+  font-size: 50px;
+}
+.Social_Media .content ul li .circle i:nth-child(1) {
+  color: #4fce5d;
+}
+.Social_Media .content ul li .circle i[class="fab fa-facebook-f"] {
+  color: #275c9e;
+}
+.Social_Media .content ul li .circle i[class="fab fa-twitter"] {
+  color: #1dabdd;
+}
+.Social_Media .content ul li .circle i[class="fas fa-envelope"] {
+  color: #cb4639;
+}
+.Social_Media .content ul li .circle1:hover,
+.Social_Media .content ul li .p1 {
+  background: #4fce5e;
+}
+.Social_Media .content ul li .circle2:hover,
+.Social_Media .content ul li .p2 {
+  background: #275d9e;
+}
+.Social_Media .content ul li .circle3:hover,
+.Social_Media .content ul li .p3 {
+  background: #1daadd;
+}
+.Social_Media .content ul li .circle4:hover,
+.Social_Media .content ul li .p4 {
+  background: #cb4539;
+}
+.Social_Media .content ul li .circle1:hover i,
+.Social_Media .content ul li .circle2:hover i,
+.Social_Media .content ul li .circle3:hover i,
+.Social_Media .content ul li .circle4:hover i {
+  color: #fff;
+}
+.Social_Media .content ul li h1 {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  margin: -15px 0 0 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 50px;
+  color: rgba(0, 0, 0, 0.8235294118);
+  position: relative;
+}
+.Social_Media .content ul li p {
+  width: 50%;
+  height: 5px;
+  margin: auto;
+  border-radius: 0 0 5px 5px;
 }
